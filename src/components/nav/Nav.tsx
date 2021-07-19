@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme: Theme) =>
     navbtn: {
       textTransform: 'none',
       fontSize: 18,
-      marginRight: 25,
+      marginRight: 27,
 
         },
     logo: {

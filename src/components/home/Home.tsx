@@ -1,6 +1,10 @@
 import { Button, createStyles, makeStyles, Paper, Theme } from "@material-ui/core";
 import { Grid } from "@material-ui/core";
 import React from "react";
+import three from "../../images/three.jpg"
+import two from "../../images/two.jpg"
+
+
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -17,7 +21,30 @@ const useStyles = makeStyles((theme: Theme) =>
         textAlign:'center',
         margin: -10
       
-    }
+    },
+    imgone: {
+        background: 'green'
+    },
+    imgtwo: {
+        background: 'blue',
+        height: '370px',
+        width: '246px'
+
+
+    },
+    imgthree: {
+        background: 'red',
+        height: 360,
+        width: 436
+
+
+    },
+    textSide: {
+        // marginTop:"103px", 
+        // paddingLeft: "74px", 
+        dispaly: 'flex', 
+justifyContent: 'center'    }
+    
     
   }),
 );
@@ -28,7 +55,14 @@ export default function Home(){
     return(
         <div>
             <Grid container spacing={3}>
-                <Grid item xs={4} style={{marginTop:"103px"}}>
+                <Grid container xs={4}
+                direction="column"
+                alignItems="center"
+                justify="center"
+                style={{ minHeight: '100vh' }} 
+
+  >
+                    {/* <Box display="flex" justifyContent="center"> */}
                     <h1 className={classes.text}>CREATE</h1>
                     <h1 className={classes.text} style={{color: "#7FA63F", paddingLeft: "70px"}}>YOUR</h1>
                     <h1 className={classes.text} style={{paddingRight:"23px"}} >GREEN</h1>
@@ -38,11 +72,20 @@ export default function Home(){
                         SHOP NOW
                     </Button>
                     </h1>
+                    {/* </Box> */}
 
                    
                 </Grid>
                 <Grid item xs={8}>
                     <Paper className={classes.paper}>xs=6</Paper>
+                    <div>
+                        <img src={three} alt="three" className={classes.imgthree}/>
+                    </div>
+                    <div>
+                    <img src={two} alt="three" className={classes.imgtwo}/>
+                    </div>
+                    <div></div>
+
                 </Grid>
                   
             </Grid>

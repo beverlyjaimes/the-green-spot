@@ -32,7 +32,7 @@ export default function Nav(){
     const classes = useStyles();
     return(
   
-      <AppBar position="static" elevation={0} className={classes.root}>
+      <AppBar position="sticky" elevation={0} className={classes.root}>
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
         

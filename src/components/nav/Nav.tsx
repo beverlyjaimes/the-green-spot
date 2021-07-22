@@ -1,4 +1,4 @@
-import { AppBar, Button, createStyles, makeStyles, Theme, Toolbar, Typography, IconButton} from "@material-ui/core";
+import { AppBar, createStyles, makeStyles, Theme, Toolbar, Typography, IconButton, Tabs, Tab} from "@material-ui/core";
 import React from "react";
 import logo from "../../images/logo.png"
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
@@ -38,9 +38,22 @@ export default function Nav(){
         
           <img src={logo} alt="Logo" className={classes.logo}/>
           </Typography>
-           <Button className={classes.navbtn}>New Arrivals</Button>
+           {/* <Button className={classes.navbtn}>New Arrivals</Button>
            <Button className={classes.navbtn}>Best Sellers</Button>
-           <Button className={classes.navbtn}>About Us</Button>
+           <Button className={classes.navbtn}>About Us</Button> */}
+
+           <Tabs
+           className={classes.navbtn}
+            // value={value}
+            color="#000000"
+            textColor="secondary"
+            // onChange={handleChange}
+            aria-label="disabled tabs example">
+             <Tab label="New Arrivals"/>
+             <Tab label="Best Sellers"/>
+             <Tab label="About Us"/>
+
+           </Tabs>
             {/* <Button className={classes.navbtn}>Cart</Button> */}
             <IconButton aria-label="cart" style={{color: "black"}}>
               <ShoppingCartIcon/>
